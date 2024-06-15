@@ -243,3 +243,6 @@ docker ps
 <div align="center">
 <img src="./asset/integration_result.png">
 </div>
+
+# Conclusions
+Neira Sphere is a waste classification project using TensorFlow and Keras, with the VGG19 model chosen for its optimal balance between accuracy and size. This enhances the efficiency and accuracy of waste sorting at waste processing facilities, supports better waste management, and contributes to the fields of deep learning and environmental conservation. Future development plans include model enhancement, applications in industries and households, and public education on sustainable waste management.
