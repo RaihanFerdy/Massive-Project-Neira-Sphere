@@ -157,9 +157,10 @@ In the flow, when the user clicks on the "Scan Trash" menu, the application will
 7. **Displaying Results**
     - The front-end of the application receives the prediction results from the backend and displays the classification results on the user's screen, providing them with the information about the type of waste captured in the image.
 
----
 
-# Requirements
+
+# Deployment
+## Requirements
 - Devices with Windows 10/11 64-bit system
 - Minimum 4GB RAM
 - Minimum 40-80GB remaining storage
@@ -167,9 +168,8 @@ In the flow, when the user clicks on the "Scan Trash" menu, the application will
 - Download & Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - Download & Install [Python 3.8+](https://www.python.org/downloads/)
 
-
-# Steps
-## A. Setup and Installation
+## Steps
+### A. Setup and Installation
 1. Clone the repository
 ```
 git clone https://github.com/barenbaruna/Massive-Project-Neira-Sphere.git
@@ -193,12 +193,12 @@ API_GROQ=YOUR_TOKEN_GROQ
 API_IBM=YOUR_TOKEN_IBM
 ```
 
-## B. Usage
-### Running in terminal
+### B. Usage
+#### Running in terminal
 1. Run in terminal `python -m flask run` or `python app.py`
 2. The API will be accessible at `http://127.0.0.1:5000`
 
-### Running in Docker Desktop
+#### Running in Docker Desktop
 1. Open Docker Desktop
 2. Open terminal and build the Docker Image
 ```
@@ -213,7 +213,7 @@ docker run -d -p 5000:5000 --name restapi_neira_container restapi_neira
 docker ps
 ```
 
-### API Testing with Postman
+#### API Testing with Postman
 1. Open Postman, then add a new session in your workspace.
    ![](https://i.imgur.com/gDbWIW1.png)
 2. Change the method to POST and enter `http://127.0.0.1:5000` appending `/result` to the end of the URL.
