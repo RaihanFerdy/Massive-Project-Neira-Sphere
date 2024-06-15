@@ -96,6 +96,9 @@ We experimented with several well-known models for image classification: VGG-16,
 ### Model Evaluation
 ![Confusion Matrix](./asset/confusion_matrix.png)
 The models were evaluated based on several metrics, including accuracy, precision, recall, and F1-score. Below are the evaluation results for each model:
+<br>
+
+**VGG-16**
 | Class    | Precision | Recall | F1-Score | Support |
 |:--------:|:---------:|:------:|:--------:|:-------:|
 | battery  |    1.00   |  1.00  |   1.00   |    87   |
@@ -111,6 +114,7 @@ The models were evaluated based on several metrics, including accuracy, precisio
 
 <br>
 
+**VGG-19**
 | Class    | Precision | Recall | F1-Score | Support |
 |:--------:|:---------:|:------:|:--------:|:-------:|
 | battery  |    0.99   |  1.00  |   0.99   |    87   |
@@ -126,6 +130,7 @@ The models were evaluated based on several metrics, including accuracy, precisio
 
 <br>
 
+**ResNet-50**
 | Class    | Precision | Recall | F1-Score | Support |
 |:--------:|:---------:|:------:|:--------:|:-------:|
 | battery  |    0.98   |  0.97  |   0.97   |    87   |
