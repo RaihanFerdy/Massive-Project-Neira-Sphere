@@ -28,7 +28,7 @@ This repository contains the implementation of an AI-based waste classification 
 - [Zona Diatri](https://www.linkedin.com/in/zona-diatri-1275a0222/) (Design Researcher) 
 - [Baren Baruna Harahap](https://www.linkedin.com/in/barenbarunaharahap/) (Data Engineer)
 - [Muhammad Iqmal Basori](https://www.linkedin.com/in/muhammad-iqmal-basori-b6017128a/) (Machine Learning Engineer)
-- [Muhammad Raihan Ferdyansyah](https://www.linkedin.com/in/muhammad-raihan-ferdyansyah/) (Machine Learning Ops)
+- [Muhammad Raihan Ferdyansyah](https://www.linkedin.com/in/muhammad-raihan-ferdyansyah/) (Machine Learning Operations)
 
 
 
