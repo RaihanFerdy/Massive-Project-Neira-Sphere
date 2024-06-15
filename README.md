@@ -102,7 +102,9 @@ The models were evaluated based on several metrics, including accuracy, precisio
 |          |           |        |          |         |
 | **Accuracy**   |           |        |  **0.97**   |   465   |
 | **Macro Avg**  |  **0.97** | **0.97** | **0.97** |   465   |
-| **Weighted Avg** | **0.97** | **0.97** | **0.97** |   465   | 
+| **Weighted Avg** | **0.97** | **0.97** | **0.97** |   465   |
+
+<br>
 
 | Class    | Precision | Recall | F1-Score | Support |
 |:--------:|:---------:|:------:|:--------:|:-------:|
@@ -116,6 +118,8 @@ The models were evaluated based on several metrics, including accuracy, precisio
 | **Accuracy**   |           |        |  **0.96**   |   465   |
 | **Macro Avg**  |  **0.96** | **0.96** | **0.96** |   465   |
 | **Weighted Avg** | **0.96** | **0.96** | **0.96** |   465   |
+
+<br>
 
 | Class    | Precision | Recall | F1-Score | Support |
 |:--------:|:---------:|:------:|:--------:|:-------:|
