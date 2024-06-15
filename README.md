@@ -25,6 +25,122 @@
 - [Muhammad Iqmal Basori](https://www.linkedin.com/in/muhammad-iqmal-basori-b6017128a/) (Machine Learning Engineer)
 - [Muhammad Raihan Ferdyansyah](https://www.linkedin.com/in/muhammad-raihan-ferdyansyah/) (Machine Learning Ops)
 
+# Idea Background
+## 1. Theme
+Theme: Sustainable Development Goals (SDGs) & environment
+## 2. Problem
+Problem: Difficulty in efficiently segregating recyclable and non-recyclable waste.
+## 3. Solution
+Solution: Developing an AI-based application capable of multi-class classification to distinguish between recyclable and non-recyclable waste. The model is trained on a diverse dataset of waste images to provide accurate classifications. This AI model will be integrated into the EcoSphere application, enabling users to classify waste by taking a photo with their mobile phone camera.
+
+# Dataset and Algorithm
+## 1. Dataset
+### Data Collection
+The dataset used in this project is a combination of two sources from Kaggle:
+1. Data with six classes: trash, glass, plastic, organic, paper, and cardboard.
+   - [Link to dataset](https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification)
+2. Additional data with twelve classes: battery, biological, white-glass, brown-glass, cardboard, clothes, green-glass, metal, paper, plastic, shoes, and trash.
+   - [Link to dataset](https://www.kaggle.com/datasets/mostafaabla/garbage-classification)
+3. Final dataset after pre-processing
+   - [Link to dataset](https://drive.google.com/drive/folders/1p_URIjIpd7PQY3v7YpOt_po4e3Wepzdf?usp=sharing)
+
+### Data Cleaning
+Data cleaning involved merging and balancing the datasets to form a uniform dataset with six classes: metal, glass, organic, paper, battery, and plastic. We used pandas for this process.
+
+### Image Preprocessing
+| Original Dataset Example | Cleaned Dataset Example |
+| ------------------------ | ----------------------- |
+| ![Original Image](./asset/original_image.png) | ![Cleaned Image](./asset/preprocessing_image.png) |
+
+## 2. Algorithm
+### Framework
+The models were built using TensorFlow & Keras.
+### Model Development
+We experimented with several well-known models for image classification: VGG-16, VGG-19, and ResNet-50. The training parameters for these models are as follows:
+- **VGG16**
+    - Epochs: 200
+    - Learning Rate: 0.001
+    - Batch Size: 32
+- **VGG19**
+    - Epochs: 200
+    - Learning Rate: 0.001
+    - Batch Size: 32
+- **ResNet50**
+    - Epochs: 200
+    - Learning Rate: 0.001
+    - Batch Size: 32
+
+### Model Evaluation
+![Confusion Matrix](./asset/confusion_matrix.png)
+The models were evaluated based on several metrics, including accuracy, precision, recall, and F1-score. Below are the evaluation results for each model:
+
+| Class    | Precision | Recall | F1-Score | Support |
+|:--------:|:---------:|:------:|:--------:|:-------:|
+| battery  |    1.00   |  1.00  |   1.00   |    87   |
+| glass    |    0.97   |  0.90  |   0.94   |    73   |
+| metal    |    0.94   |  0.93  |   0.93   |    69   |
+| organic  |    0.98   |  1.00  |   0.99   |    64   |
+| paper    |    0.99   |  0.99  |   0.99   |    92   |
+| plastic  |    0.92   |  0.97  |   0.95   |    80   |
+|          |           |        |          |         |
+| **Accuracy**   |           |        |  **0.97**   |   465   |
+| **Macro Avg**  |  **0.97** | **0.97** | **0.97** |   465   |
+| **Weighted Avg** | **0.97** | **0.97** | **0.97** |   465   | 
+
+
+| Class    | Precision | Recall | F1-Score | Support |
+|:--------:|:---------:|:------:|:--------:|:-------:|
+| battery  |    0.99   |  1.00  |   0.99   |    87   |
+| glass    |    0.97   |  0.90  |   0.94   |    73   |
+| metal    |    0.91   |  0.97  |   0.94   |    69   |
+| organic  |    0.98   |  0.97  |   0.98   |    64   |
+| paper    |    0.96   |  0.99  |   0.97   |    92   |
+| plastic  |    0.97   |  0.94  |   0.96   |    80   |
+|          |           |        |          |         |
+| **Accuracy**   |           |        |  **0.96**   |   465   |
+| **Macro Avg**  |  **0.96** | **0.96** | **0.96** |   465   |
+| **Weighted Avg** | **0.96** | **0.96** | **0.96** |   465   |
+
+| Class    | Precision | Recall | F1-Score | Support |
+|:--------:|:---------:|:------:|:--------:|:-------:|
+| battery  |    0.98   |  0.97  |   0.97   |    87   |
+| glass    |    0.94   |  0.93  |   0.94   |    73   |
+| metal    |    0.89   |  0.94  |   0.92   |    69   |
+| organic  |    0.98   |  1.00  |   0.99   |    64   |
+| paper    |    0.99   |  0.98  |   0.98   |    92   |
+| plastic  |    0.91   |  0.89  |   0.90   |    80   |
+|          |           |        |          |         |
+| **Accuracy**   |           |        |  **0.95**   |   465   |
+| **Macro Avg**  |  **0.95** | **0.95** | **0.95** |   465   |
+| **Weighted Avg** | **0.95** | **0.95** | **0.95** |   465   |
+
+
+# Prototype
+## Flow Research
+![Flow Model AI](./asset/prototype.png)
+In the flow, when the user clicks on the "Scan Trash" menu, the application will request permission from the user to activate the camera. Subsequently, the user will take a photo of the trash, and the application will process this photo. Following that, the application will provide the classification type of the trash along with a brief description.
+
+## Flow Model AI
+![Flow Model AI](./asset/flow_model_ai.png)
+
+## Integration
+![Flow Apps AI](./asset/flow_apps_ai.png)
+1. **User Interaction**
+    - The user opens the EcoSphere application on their mobile device and navigates to the waste classification feature.
+2. **Camera Access**
+    - The application requests permission to access the device's camera. Upon granting permission, the user captures an image of the waste using the camera.
+3. **Image Submission**
+    - The captured image is sent to the backend server. The backend server then makes a request to the public REST API endpoint, sending the image for processing.
+4. **Model Prediction**
+    - The model hosted on the server receives the image from the backend request. It processes the image and performs waste classification, generating a prediction result in JSON format.
+5. **REST API Callback**
+    - The REST API responds to the backend server with the prediction results in JSON format.
+6. **Backend Processing**
+    - Upon receiving the prediction results, the backend server processes the data if necessary and forwards the results to the front-end of the application.
+7. **Displaying Results**
+    - The front-end of the application receives the prediction results from the backend and displays the classification results on the user's screen, providing them with the information about the type of waste captured in the image.
+
+---
 
 # Requirements
 - Devices with Windows 10/11 64-bit system
