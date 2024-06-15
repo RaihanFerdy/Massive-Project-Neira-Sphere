@@ -1,8 +1,7 @@
-<h1 align="center"> EchoSphere Documentation API</h1>
+<h1 align="center"> EchoSphere Waste Classification AI</h1>
 <div align="center">
 <img src="./asset/logo.png">
 </div>
-<p align="center"> EchoSphere AI Model API Documentation </p>
 
 <div align="center">
 <img src="https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white">
@@ -22,7 +21,8 @@
 <img src="https://img.shields.io/badge/IBM%20Cloud-1261FE.svg?style=for-the-badge&logo=IBM-Cloud&logoColor=white">
 </div>
 
-
+# Overview
+This repository contains the implementation of an AI-based waste classification system, designed to classify images of waste into six categories: metal, glass, organic, paper, battery, and plastic. The system is integrated into the EcoSphere application, allowing users to classify waste using their smartphone cameras.
 
 # Teams
 - [Zona Diatri](https://www.linkedin.com/in/zona-diatri-1275a0222/) (Design Researcher) 
@@ -57,10 +57,10 @@ The dataset used in this project is a combination of two sources from Kaggle:
    - [Link to dataset](https://www.kaggle.com/datasets/mostafaabla/garbage-classification)
 3. Final dataset after pre-processing
    - [Link to dataset](https://drive.google.com/drive/folders/1p_URIjIpd7PQY3v7YpOt_po4e3Wepzdf?usp=sharing)
-
-
+  
+   
 ### Data Cleaning
-Data cleaning involved merging and balancing the datasets to form a uniform dataset with six classes: metal, glass, organic, paper, battery, and plastic. We used pandas for this process.
+Data preprocessing involved merging and relabeling to create a balanced dataset of 775 images per class, ensuring equal representation across categories.
 
 ### Image Preprocessing
 | Original Dataset Example | Cleaned Dataset Example |
@@ -74,6 +74,11 @@ Data cleaning involved merging and balancing the datasets to form a uniform data
 The models were built using TensorFlow & Keras.
 
 ### Model Development
+Training involved:
+   - Checkpoint saving for the best model based on validation loss.
+   - Early stopping to halt training if validation metrics plateau.
+   - Learning rate reduction to optimize convergence.
+
 We experimented with several well-known models for image classification: VGG-16, VGG-19, and ResNet-50. The training parameters for these models are as follows:
 - **VGG16**
     - Epochs: 200
@@ -133,6 +138,7 @@ The models were evaluated based on several metrics, including accuracy, precisio
 | **Accuracy**   |           |        |  **0.95**   |   465   |
 | **Macro Avg**  |  **0.95** | **0.95** | **0.95** |   465   |
 | **Weighted Avg** | **0.95** | **0.95** | **0.95** |   465   |
+
 
 
 
