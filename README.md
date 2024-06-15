@@ -34,15 +34,15 @@ This repository contains the implementation of an AI-based waste classification 
 
 # Idea Background
 ## 1. Theme
-Theme: Sustainable Development Goals (SDGs) & environment
+Sustainable Development Goals (SDGs) & environment
 
 
 ## 2. Problem
-Problem: Difficulty in efficiently segregating recyclable and non-recyclable waste.
+Difficulty in efficiently segregating recyclable and non-recyclable waste.
 
 
 ## 3. Solution
-Solution: Developing an AI-based application capable of multi-class classification to distinguish between recyclable and non-recyclable waste. The model is trained on a diverse dataset of waste images to provide accurate classifications. This AI model will be integrated into the EcoSphere application, enabling users to classify waste by taking a photo with their mobile phone camera.
+Developing an AI-based application capable of multi-class classification to distinguish between recyclable and non-recyclable waste. The model is trained on a diverse dataset of waste images to provide accurate classifications. This AI model will be integrated into the EcoSphere application, enabling users to classify waste by taking a photo with their mobile phone camera.
 
 
 
@@ -150,7 +150,7 @@ The models were evaluated based on several metrics, including accuracy, precisio
 # Prototype
 
 ## Flow Research
-![Flow Model AI](./asset/prototype.png)
+<img src="./asset/prototype.png" width="1163" height="930">
 In the flow, when the user clicks on the "Scan Trash" menu, the application will request permission from the user to activate the camera. Subsequently, the user will take a photo of the trash, and the application will process this photo. Following that, the application will provide the classification type of the trash along with a brief description.
 
 ## Flow Model AI
@@ -239,15 +239,17 @@ docker ps
 3. Select the `Body` tab and choose `form-data`. Change the `key` type from `text` to `file` for the file you want to upload.
    ![](./asset/postman_step3.1.png)
    ![](./asset/postman_step3.2.png)
-4. Send the request and view the response from the API.
+4. Send the request and view the response from the API.\
+   NOTE: If you want to know, how to deploy your Code with [code engine](https://cloud.ibm.com/codeengine/overview) service from IBM Cloud visit this [link](https://github.com/ibmacademy-aai/flask-docker-code-engine)
    ![](./asset/postman_step4.png)
-5. Send the request to Deployment API `https://neira-api.1hs5xuud6atv.us-south.codeengine.appdomain.cloud` and appending `/result` to the end of the URL
+6. Send the request to Deployment API `https://neira-api.1hs5xuud6atv.us-south.codeengine.appdomain.cloud` and appending `/result` to the end of the URL
    ![](./asset/postman_step5.png)
 
 # Result
 <div align="center">
-<img src="./asset/integration_result.png">
+<img src="./asset/integration_result.png" width="256" height="516">
 </div>
+Neira Sphere simplifies the waste classification process through a mobile application. Users simply take a picture of the waste with their phone camera. The image is then sent to the backend server, which forwards it to a REST API for analysis. The deep learning model processes the image and returns the result in JSON format. This result is then sent back to the backend and displayed in the application. This process ensures users receive quick and accurate waste classification.
 
 # Conclusions
 EcoSphere is a waste classification project using TensorFlow and Keras, with the VGG19 model chosen for its optimal balance between accuracy and size. This enhances the efficiency and accuracy of waste sorting at waste processing facilities, supports better waste management, and contributes to the fields of deep learning and environmental conservation. Future development plans include model enhancement, applications in industries and households, and public education on sustainable waste management.
