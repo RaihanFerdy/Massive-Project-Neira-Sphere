@@ -150,7 +150,7 @@ The models were evaluated based on several metrics, including accuracy, precisio
 # Prototype
 
 ## Flow Research
-<img src="./asset/prototype.png" width="1163" height="930">
+![Flow Research AI](./asset/prototype.png)
 In the flow, when the user clicks on the "Scan Trash" menu, the application will request permission from the user to activate the camera. Subsequently, the user will take a photo of the trash, and the application will process this photo. Following that, the application will provide the classification type of the trash along with a brief description.
 
 ## Flow Model AI
