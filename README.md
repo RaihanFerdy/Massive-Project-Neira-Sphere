@@ -1,4 +1,4 @@
-<h1 align="center"> EchoSphere Waste Classification AI</h1>
+<h1 align="center"> EcoSphere Waste Classification AI</h1>
 <div align="center">
 <img src="./asset/logo.png">
 </div>
