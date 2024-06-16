@@ -249,7 +249,7 @@ docker ps
 <div align="center">
 <img src="./asset/integration_result.png" width="256" height="516">
 </div>
-Neira Sphere simplifies the waste classification process through a mobile application. Users simply take a picture of the waste with their phone camera. The image is then sent to the backend server, which forwards it to a REST API for analysis. The deep learning model processes the image and returns the result in JSON format. This result is then sent back to the backend and displayed in the application. This process ensures users receive quick and accurate waste classification.
+EcoSphere simplifies the waste classification process through a mobile application. Users simply take a picture of the waste with their phone camera. The image is then sent to the backend server, which forwards it to a REST API for analysis. The deep learning model processes the image and returns the result in JSON format. This result is then sent back to the backend and displayed in the application. This process ensures users receive quick and accurate waste classification.
 
 # Conclusions
 EcoSphere is a waste classification project using TensorFlow and Keras, with the VGG19 model chosen for its optimal balance between accuracy and size. This enhances the efficiency and accuracy of waste sorting at waste processing facilities, supports better waste management, and contributes to the fields of deep learning and environmental conservation. Future development plans include model enhancement, applications in industries and households, and public education on sustainable waste management.
