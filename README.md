@@ -247,7 +247,7 @@ docker ps
 
 # Result
 <div align="center">
-<img src="./asset/integration_result.png" width="256" height="516">
+<img src="./asset/integration_result1.jpg" width="256" height="516">
 </div>
 EcoSphere simplifies the waste classification process through a mobile application. Users simply take a picture of the waste with their phone camera. The image is then sent to the backend server, which forwards it to a REST API for analysis. The deep learning model processes the image and returns the result in JSON format. This result is then sent back to the backend and displayed in the application. This process ensures users receive quick and accurate waste classification.
 
